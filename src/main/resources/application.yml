@@ -3,6 +3,10 @@ spring:
     name: barista-service
   cloud:
     stream:
+      kafka:
+        binder:
+          brokers: localhost
+          defaultBrokerPort: 9092
       bindings:
         newOrders:
           group: barista-service
@@ -21,11 +25,6 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: spring
-    password: spring
 
 management:
   endpoints:
