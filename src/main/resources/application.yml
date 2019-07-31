@@ -25,6 +25,13 @@ spring:
   output:
     ansi:
       enabled: ALWAYS
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411/
+    sender:
+      type: web
 
 management:
   endpoints:
